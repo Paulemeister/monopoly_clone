@@ -6,8 +6,10 @@ export var prize: int
 export var rent: int
 
 func _ready():
-	pass # Replace with function body.
+	pass 
 
 
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
+
+

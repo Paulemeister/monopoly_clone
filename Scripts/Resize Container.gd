@@ -1,5 +1,5 @@
 # Added tool for functionality inside the editor
-tool
+#tool
 # Code from official Godot Tutorial about Containers
 extends Container
 

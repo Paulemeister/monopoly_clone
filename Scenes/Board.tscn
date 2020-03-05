@@ -1,10 +1,318 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Board.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Field.tscn" type="PackedScene" id=2]
 
-[node name="Board" type="Node2D"]
+[node name="MarginContainer" type="MarginContainer"]
+margin_right = 1200.0
+margin_bottom = 1200.0
 script = ExtResource( 1 )
+wanted_size = 1200
+field_size_percentage = 0.15
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1200.0
+margin_bottom = 1200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.976471, 0.984314, 0.788235, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+margin_right = 1200.0
+margin_bottom = 1200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Bottom" type="HBoxContainer" parent="ReferenceRect"]
+pause_mode = 1
+editor/display_folded = true
+margin_left = 180.0
+margin_top = 1020.0
+margin_right = 1020.0
+margin_bottom = 1200.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 3.0
+custom_constants/separation = 1
+
+[node name="Field" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 0.0
+margin_right = 139.0
+margin_bottom = 180.0
+
+[node name="Field2" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 0.0
+margin_right = 279.0
+margin_bottom = 180.0
+
+[node name="Field3" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_top = 0.0
+margin_right = 419.0
+margin_bottom = 180.0
+
+[node name="Field4" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 420.0
+margin_top = 0.0
+margin_right = 559.0
+margin_bottom = 180.0
+
+[node name="Field5" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 560.0
+margin_top = 0.0
+margin_right = 699.0
+margin_bottom = 180.0
+
+[node name="Field6" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_top = 0.0
+margin_right = 840.0
+margin_bottom = 180.0
+
+[node name="Top" type="HBoxContainer" parent="ReferenceRect"]
+editor/display_folded = true
+margin_left = 1020.0
+margin_top = 180.0
+margin_right = 1860.0
+margin_bottom = 360.0
+rect_rotation = 180.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 3.0
+custom_constants/separation = 1
+
+[node name="Field" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 0.0
+margin_right = 139.0
+margin_bottom = 180.0
+
+[node name="Field2" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 0.0
+margin_right = 279.0
+margin_bottom = 180.0
+
+[node name="Field3" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_top = 0.0
+margin_right = 419.0
+margin_bottom = 180.0
+
+[node name="Field4" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 420.0
+margin_top = 0.0
+margin_right = 559.0
+margin_bottom = 180.0
+
+[node name="Field5" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 560.0
+margin_top = 0.0
+margin_right = 699.0
+margin_bottom = 180.0
+
+[node name="Field6" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_top = 0.0
+margin_right = 840.0
+margin_bottom = 180.0
+
+[node name="Left" type="HBoxContainer" parent="ReferenceRect"]
+pause_mode = 1
+editor/display_folded = true
+margin_left = 180.0
+margin_top = 180.0
+margin_right = 1020.0
+margin_bottom = 360.0
+rect_rotation = 90.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 3.0
+custom_constants/separation = 1
+
+[node name="Field" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 0.0
+margin_right = 139.0
+margin_bottom = 180.0
+
+[node name="Field2" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 0.0
+margin_right = 279.0
+margin_bottom = 180.0
+
+[node name="Field3" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_top = 0.0
+margin_right = 419.0
+margin_bottom = 180.0
+
+[node name="Field4" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 420.0
+margin_top = 0.0
+margin_right = 559.0
+margin_bottom = 180.0
+
+[node name="Field5" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 560.0
+margin_top = 0.0
+margin_right = 699.0
+margin_bottom = 180.0
+
+[node name="Field6" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_top = 0.0
+margin_right = 840.0
+margin_bottom = 180.0
+
+[node name="Right" type="HBoxContainer" parent="ReferenceRect"]
+pause_mode = 1
+editor/display_folded = true
+margin_left = 1020.0
+margin_top = 1020.0
+margin_right = 1860.0
+margin_bottom = 1200.0
+rect_rotation = 270.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 3.0
+custom_constants/separation = 1
+
+[node name="Field" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 0.0
+margin_right = 139.0
+margin_bottom = 180.0
+
+[node name="Field2" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 0.0
+margin_right = 279.0
+margin_bottom = 180.0
+
+[node name="Field3" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_top = 0.0
+margin_right = 419.0
+margin_bottom = 180.0
+
+[node name="Field4" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 420.0
+margin_top = 0.0
+margin_right = 559.0
+margin_bottom = 180.0
+
+[node name="Field5" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 560.0
+margin_top = 0.0
+margin_right = 699.0
+margin_bottom = 180.0
+
+[node name="Field6" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_top = 0.0
+margin_right = 840.0
+margin_bottom = 180.0
+
+[node name="Top Left" type="MarginContainer" parent="ReferenceRect"]
+editor/display_folded = true
+margin_right = 180.0
+margin_bottom = 180.0
+
+[node name="ColorRect2" type="ColorRect" parent="ReferenceRect/Top Left"]
+margin_right = 180.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.133333, 0.690196, 0.0980392, 1 )
+
+[node name="Top Right" type="MarginContainer" parent="ReferenceRect"]
+editor/display_folded = true
+margin_left = 1020.0
+margin_right = 1200.0
+margin_bottom = 180.0
+
+[node name="ColorRect4" type="ColorRect" parent="ReferenceRect/Top Right"]
+margin_right = 180.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.00784314, 0, 1, 1 )
+
+[node name="Bottom Left" type="MarginContainer" parent="ReferenceRect"]
+editor/display_folded = true
+margin_top = 1020.0
+margin_right = 180.0
+margin_bottom = 1200.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="ColorRect3" type="ColorRect" parent="ReferenceRect/Bottom Left"]
+margin_right = 180.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.266667, 1, 0, 1 )
+
+[node name="Bottom Right" type="MarginContainer" parent="ReferenceRect"]
+editor/display_folded = true
+margin_left = 1020.0
+margin_top = 1020.0
+margin_right = 1200.0
+margin_bottom = 1200.0
+
+[node name="ColorRect4" type="ColorRect" parent="ReferenceRect/Bottom Right"]
+margin_right = 180.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 0, 0, 1 )

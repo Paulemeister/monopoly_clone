@@ -4,4 +4,6 @@
 
 [resource]
 resource_name = "OpenSans"
+size = 17
+extra_spacing_char = -1
 font_data = ExtResource( 1 )

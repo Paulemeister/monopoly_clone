@@ -11,7 +11,10 @@ Attempt of replicating Monopoly with Godot
 - Realtime font resizing added
 - Realtime text updating added
 - Finished realtime resizable board grid
-
+### Version 1.4
+- Added function that returns the field  that a given number is in
+- Added a Main Scene
+- Noticed a bug with the resizing of containers of a Board instance, when another Field Instance, that has bigger x dimensions than the Board instance, is in the same Scene
 
 
 

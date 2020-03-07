@@ -2,15 +2,18 @@ extends MarginContainer
 tool
 
 export var wanted_size: int = 600
-export var field_size_percentage: float = 0.2
-var fields
+export var field_size_percentage: float = 0.15
+var fields = []
 export var fix_square: bool = true
 var field_size: int
 func _ready():
+	get_fields()
+	print(fields)
 	pass
 
 func _process(delta):
 	arrange_stuff()
+
 	
 
 func arrange_stuff():
@@ -57,3 +60,27 @@ func arrange_stuff():
 	$ReferenceRect/Left.set_position(Vector2(offset,offset))
 	$ReferenceRect/Right.set_position(Vector2(actual_size.x-offset,actual_size.y-offset))
 	
+func get_fields():
+	for container in $ReferenceRect.get_children():
+		var temp = []
+		var temp_lenght 
+		for field in container.get_children():
+			temp.append(field)
+		temp_lenght = len(temp)
+		for i in range(temp_lenght):
+			print(i)
+			print(temp_lenght)
+			fields.append(temp[temp_lenght-i-1])
+			
+func get_field(number):
+	return fields[number]
+
+
+
+
+
+
+
+
+
+

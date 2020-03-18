@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Field.gd" type="Script" id=1]
 [ext_resource path="res://Media/OpenSans.tres" type="DynamicFont" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Media/OpenSans-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+resource_name = "OpenSans"
+size = 8
+extra_spacing_char = -1
+font_data = SubResource( 1 )
 
 [node name="Field" type="VBoxContainer"]
 anchor_top = 1.0
@@ -71,7 +80,7 @@ margin_right = 184.0
 margin_bottom = 209.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "$0"
 align = 1

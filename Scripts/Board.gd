@@ -6,15 +6,17 @@ export var field_size_percentage: float = 0.15
 var fields = []
 export var fix_square: bool = true
 var field_size: int
+var field_amount: int
 func _ready():
+	print("Board Setup Initialized")
 	get_fields()
-	print(fields)
-	pass
+	print("Board Setup Finished")
 
 func _process(delta):
 	arrange_stuff()
 
-	
+func get_field_amount():
+	return self.field_amount
 
 func arrange_stuff():
 	var actual_size = self.get_size()
@@ -26,7 +28,7 @@ func arrange_stuff():
 		else:
 			field_size = min(actual_size.x, actual_size.y)
 	else:
-		field_size = get_viewport().size.y
+		field_size = get_parent().get_size().y
 		self.set_size(Vector2(field_size,field_size))
 		
 	var offset = int(field_size*field_size_percentage)
@@ -61,6 +63,7 @@ func arrange_stuff():
 	$ReferenceRect/Right.set_position(Vector2(actual_size.x-offset,actual_size.y-offset))
 	
 func get_fields():
+	field_amount = 0
 	for container in $ReferenceRect.get_children():
 		var temp = []
 		var temp_lenght 
@@ -68,9 +71,9 @@ func get_fields():
 			temp.append(field)
 		temp_lenght = len(temp)
 		for i in range(temp_lenght):
-			print(i)
-			print(temp_lenght)
 			fields.append(temp[temp_lenght-i-1])
+			field_amount += 1
+	print("Got Fields")
 			
 func get_field(number):
 	return fields[number]

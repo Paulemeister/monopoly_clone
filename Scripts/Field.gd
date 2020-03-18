@@ -7,8 +7,10 @@ export var prize: int = 0
 export var rent: int = 0
 
 func _ready():
+	print("{name} Setup Initialized".format({"name":street_name}))
 	$MarginContainer/VBoxContainer/Streetname.set_text(street_name)
 	$MarginContainer/VBoxContainer/Price.set_text("$" + str(prize))
+	print("{name} Setup Finished".format({"name":street_name}))
 
 
 func _process(delta):

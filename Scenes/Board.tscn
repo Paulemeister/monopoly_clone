@@ -23,7 +23,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Bottom Right" type="MarginContainer" parent="ReferenceRect"]
-editor/display_folded = true
 margin_left = 506.0
 margin_top = 506.0
 margin_right = 595.0

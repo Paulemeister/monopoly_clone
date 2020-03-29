@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "ColorRect2D",
+"language": "GDScript",
+"path": "res://Classes/ColorRect2D.gd"
+}, {
+"base": "Control",
+"class": "Field_Baseclass",
+"language": "GDScript",
+"path": "res://Scripts/Field_Baseclass.gd"
+} ]
 _global_script_class_icons={
-
+"ColorRect2D": "",
+"Field_Baseclass": ""
 }
 
 [application]

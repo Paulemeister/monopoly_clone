@@ -46,6 +46,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+editor/display_folded = true
 margin_right = 184.0
 margin_bottom = 225.0
 size_flags_horizontal = 3
@@ -92,3 +93,112 @@ margin_bottom = 225.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+margin_right = 184.0
+margin_bottom = 225.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_right = 61.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_left = 61.0
+margin_right = 122.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_left = 122.0
+margin_right = 183.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_top = 75.0
+margin_right = 61.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_left = 61.0
+margin_top = 75.0
+margin_right = 122.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_left = 122.0
+margin_top = 75.0
+margin_right = 183.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer7" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_top = 150.0
+margin_right = 61.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer8" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_left = 61.0
+margin_top = 150.0
+margin_right = 122.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer9" type="MarginContainer" parent="MarginContainer/GridContainer"]
+margin_left = 122.0
+margin_top = 150.0
+margin_right = 183.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0

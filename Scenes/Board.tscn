@@ -1,316 +1,771 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Board.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Field.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Field_Baseclass.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Field.tscn" type="PackedScene" id=3]
 
 [node name="Board" type="MarginContainer"]
-margin_right = 595.0
-margin_bottom = 595.0
+margin_right = 600.0
+margin_bottom = 600.0
 script = ExtResource( 1 )
-wanted_size = 595
+size_fixed = true
+fixed_size = Vector2( 600, 600 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 595.0
-margin_bottom = 595.0
+margin_right = 600.0
+margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.976471, 0.984314, 0.788235, 1 )
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
-margin_right = 595.0
-margin_bottom = 595.0
+margin_right = 600.0
+margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Bottom Right" type="MarginContainer" parent="ReferenceRect"]
-margin_left = 506.0
-margin_top = 506.0
-margin_right = 595.0
-margin_bottom = 595.0
+margin_left = 510.0
+margin_top = 510.0
+margin_right = 600.0
+margin_bottom = 600.0
 
 [node name="Bottom Right" type="ColorRect" parent="ReferenceRect/Bottom Right"]
-margin_right = 89.0
-margin_bottom = 89.0
+margin_right = 90.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 1, 0, 0, 1 )
+script = ExtResource( 2 )
+
+[node name="GridContainer" type="GridContainer" parent="ReferenceRect/Bottom Right/Bottom Right"]
+editor/display_folded = true
+margin_right = 90.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer6" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer7" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_top = 60.0
+margin_right = 30.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer8" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer9" type="MarginContainer" parent="ReferenceRect/Bottom Right/Bottom Right/GridContainer"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
 
 [node name="Bottom" type="HBoxContainer" parent="ReferenceRect"]
 pause_mode = 1
-margin_left = 89.0
-margin_top = 506.0
-margin_right = 506.0
-margin_bottom = 595.0
+editor/display_folded = true
+margin_left = 90.0
+margin_top = 510.0
+margin_right = 510.0
+margin_bottom = 600.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 3.0
 custom_constants/separation = 1
 alignment = 2
 
-[node name="bField" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+[node name="bField" parent="ReferenceRect/Bottom" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
 margin_top = 0.0
-margin_right = 68.0
-margin_bottom = 89.0
+margin_right = 69.0
+margin_bottom = 90.0
 
-[node name="bField2" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+[node name="bField2" parent="ReferenceRect/Bottom" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 69.0
+margin_left = 70.0
 margin_top = 0.0
-margin_right = 137.0
-margin_bottom = 89.0
+margin_right = 139.0
+margin_bottom = 90.0
 
-[node name="bField3" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+[node name="bField3" parent="ReferenceRect/Bottom" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 138.0
+margin_left = 140.0
 margin_top = 0.0
-margin_right = 206.0
-margin_bottom = 89.0
+margin_right = 209.0
+margin_bottom = 90.0
 
-[node name="bField4" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+[node name="bField4" parent="ReferenceRect/Bottom" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 207.0
+margin_left = 210.0
 margin_top = 0.0
-margin_right = 275.0
-margin_bottom = 89.0
+margin_right = 279.0
+margin_bottom = 90.0
 
-[node name="bField5" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+[node name="bField5" parent="ReferenceRect/Bottom" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 276.0
+margin_left = 280.0
 margin_top = 0.0
-margin_right = 344.0
-margin_bottom = 89.0
+margin_right = 349.0
+margin_bottom = 90.0
 
-[node name="bField6" parent="ReferenceRect/Bottom" instance=ExtResource( 2 )]
+[node name="bField6" parent="ReferenceRect/Bottom" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 345.0
+margin_left = 350.0
 margin_top = 0.0
-margin_right = 417.0
-margin_bottom = 89.0
+margin_right = 420.0
+margin_bottom = 90.0
 
 [node name="Bottom Left" type="MarginContainer" parent="ReferenceRect"]
-editor/display_folded = true
-margin_top = 506.0
-margin_right = 89.0
-margin_bottom = 595.0
+margin_top = 510.0
+margin_right = 90.0
+margin_bottom = 600.0
 custom_constants/margin_right = 0
 custom_constants/margin_top = 0
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 0
 
 [node name="Bottom Left" type="ColorRect" parent="ReferenceRect/Bottom Left"]
-margin_right = 89.0
-margin_bottom = 89.0
+margin_right = 90.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.266667, 1, 0, 1 )
+script = ExtResource( 2 )
+
+[node name="GridContainer" type="GridContainer" parent="ReferenceRect/Bottom Left/Bottom Left"]
+editor/display_folded = true
+margin_left = 510.0
+margin_right = 600.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer6" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer7" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_top = 60.0
+margin_right = 30.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer8" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer9" type="MarginContainer" parent="ReferenceRect/Bottom Left/Bottom Left/GridContainer"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
 
 [node name="Left" type="HBoxContainer" parent="ReferenceRect"]
 pause_mode = 1
 editor/display_folded = true
-margin_left = 89.0
-margin_top = 89.0
-margin_right = 506.0
-margin_bottom = 178.0
+margin_left = 90.0
+margin_top = 90.0
+margin_right = 510.0
+margin_bottom = 180.0
 rect_rotation = 90.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 3.0
 custom_constants/separation = 1
 
-[node name="lField" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+[node name="lField" parent="ReferenceRect/Left" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
 margin_top = 0.0
-margin_right = 68.0
-margin_bottom = 89.0
+margin_right = 69.0
+margin_bottom = 90.0
 
-[node name="lField2" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+[node name="lField2" parent="ReferenceRect/Left" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 69.0
+margin_left = 70.0
 margin_top = 0.0
-margin_right = 137.0
-margin_bottom = 89.0
+margin_right = 139.0
+margin_bottom = 90.0
 
-[node name="lField3" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+[node name="lField3" parent="ReferenceRect/Left" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 138.0
+margin_left = 140.0
 margin_top = 0.0
-margin_right = 206.0
-margin_bottom = 89.0
+margin_right = 209.0
+margin_bottom = 90.0
 
-[node name="lField4" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+[node name="lField4" parent="ReferenceRect/Left" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 207.0
+margin_left = 210.0
 margin_top = 0.0
-margin_right = 275.0
-margin_bottom = 89.0
+margin_right = 279.0
+margin_bottom = 90.0
 
-[node name="lField5" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+[node name="lField5" parent="ReferenceRect/Left" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 276.0
+margin_left = 280.0
 margin_top = 0.0
-margin_right = 344.0
-margin_bottom = 89.0
+margin_right = 349.0
+margin_bottom = 90.0
 
-[node name="lField6" parent="ReferenceRect/Left" instance=ExtResource( 2 )]
+[node name="lField6" parent="ReferenceRect/Left" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 345.0
+margin_left = 350.0
 margin_top = 0.0
-margin_right = 417.0
-margin_bottom = 89.0
+margin_right = 420.0
+margin_bottom = 90.0
 
 [node name="Top Left" type="MarginContainer" parent="ReferenceRect"]
-editor/display_folded = true
-margin_right = 89.0
-margin_bottom = 89.0
+margin_right = 90.0
+margin_bottom = 90.0
 
 [node name="Top Left" type="ColorRect" parent="ReferenceRect/Top Left"]
-margin_right = 89.0
-margin_bottom = 89.0
+margin_right = 90.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.133333, 0.690196, 0.0980392, 1 )
+script = ExtResource( 2 )
+
+[node name="GridContainer" type="GridContainer" parent="ReferenceRect/Top Left/Top Left"]
+editor/display_folded = true
+margin_left = 510.0
+margin_top = 510.0
+margin_right = 600.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer6" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer7" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_top = 60.0
+margin_right = 30.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer8" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer9" type="MarginContainer" parent="ReferenceRect/Top Left/Top Left/GridContainer"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
 
 [node name="Top" type="HBoxContainer" parent="ReferenceRect"]
 editor/display_folded = true
-margin_left = 506.0
-margin_top = 89.0
-margin_right = 923.0
-margin_bottom = 178.0
+margin_left = 510.0
+margin_top = 90.0
+margin_right = 930.0
+margin_bottom = 180.0
 rect_rotation = 180.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 3.0
 custom_constants/separation = 1
 
-[node name="tField" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+[node name="tField" parent="ReferenceRect/Top" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
 margin_top = 0.0
-margin_right = 68.0
-margin_bottom = 89.0
+margin_right = 69.0
+margin_bottom = 90.0
 
-[node name="tField2" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+[node name="tField2" parent="ReferenceRect/Top" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 69.0
+margin_left = 70.0
 margin_top = 0.0
-margin_right = 137.0
-margin_bottom = 89.0
+margin_right = 139.0
+margin_bottom = 90.0
 
-[node name="tField3" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+[node name="tField3" parent="ReferenceRect/Top" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 138.0
+margin_left = 140.0
 margin_top = 0.0
-margin_right = 206.0
-margin_bottom = 89.0
+margin_right = 209.0
+margin_bottom = 90.0
 
-[node name="tField4" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+[node name="tField4" parent="ReferenceRect/Top" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 207.0
+margin_left = 210.0
 margin_top = 0.0
-margin_right = 275.0
-margin_bottom = 89.0
+margin_right = 279.0
+margin_bottom = 90.0
 
-[node name="tField5" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+[node name="tField5" parent="ReferenceRect/Top" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 276.0
+margin_left = 280.0
 margin_top = 0.0
-margin_right = 344.0
-margin_bottom = 89.0
+margin_right = 349.0
+margin_bottom = 90.0
 
-[node name="tField6" parent="ReferenceRect/Top" instance=ExtResource( 2 )]
+[node name="tField6" parent="ReferenceRect/Top" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 345.0
+margin_left = 350.0
 margin_top = 0.0
-margin_right = 417.0
-margin_bottom = 89.0
+margin_right = 420.0
+margin_bottom = 90.0
 
 [node name="Top Right" type="MarginContainer" parent="ReferenceRect"]
-editor/display_folded = true
-margin_left = 506.0
-margin_right = 595.0
-margin_bottom = 89.0
+margin_left = 510.0
+margin_right = 600.0
+margin_bottom = 90.0
 
 [node name="Top Right" type="ColorRect" parent="ReferenceRect/Top Right"]
-margin_right = 89.0
-margin_bottom = 89.0
+margin_right = 90.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.00784314, 0, 1, 1 )
+script = ExtResource( 2 )
+
+[node name="GridContainer" type="GridContainer" parent="ReferenceRect/Top Right/Top Right"]
+margin_top = 510.0
+margin_right = 90.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_top = 30.0
+margin_right = 30.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 60.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer6" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer7" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_top = 60.0
+margin_right = 30.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer8" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="MarginContainer9" type="MarginContainer" parent="ReferenceRect/Top Right/Top Right/GridContainer"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 90.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
 
 [node name="Right" type="HBoxContainer" parent="ReferenceRect"]
 pause_mode = 1
 editor/display_folded = true
-margin_left = 506.0
-margin_top = 506.0
-margin_right = 923.0
-margin_bottom = 595.0
+margin_left = 510.0
+margin_top = 510.0
+margin_right = 930.0
+margin_bottom = 600.0
 rect_rotation = 270.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 3.0
 custom_constants/separation = 1
 
-[node name="rField" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+[node name="rField" parent="ReferenceRect/Right" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
 margin_top = 0.0
-margin_right = 68.0
-margin_bottom = 89.0
+margin_right = 69.0
+margin_bottom = 90.0
 
-[node name="rField2" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+[node name="rField2" parent="ReferenceRect/Right" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 69.0
+margin_left = 70.0
 margin_top = 0.0
-margin_right = 137.0
-margin_bottom = 89.0
+margin_right = 139.0
+margin_bottom = 90.0
 
-[node name="rField3" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+[node name="rField3" parent="ReferenceRect/Right" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 138.0
+margin_left = 140.0
 margin_top = 0.0
-margin_right = 206.0
-margin_bottom = 89.0
+margin_right = 209.0
+margin_bottom = 90.0
 
-[node name="rField4" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+[node name="rField4" parent="ReferenceRect/Right" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 207.0
+margin_left = 210.0
 margin_top = 0.0
-margin_right = 275.0
-margin_bottom = 89.0
+margin_right = 279.0
+margin_bottom = 90.0
 
-[node name="rField5" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+[node name="rField5" parent="ReferenceRect/Right" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 276.0
+margin_left = 280.0
 margin_top = 0.0
-margin_right = 344.0
-margin_bottom = 89.0
+margin_right = 349.0
+margin_bottom = 90.0
 
-[node name="rField6" parent="ReferenceRect/Right" instance=ExtResource( 2 )]
+[node name="rField6" parent="ReferenceRect/Right" instance=ExtResource( 3 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = 345.0
+margin_left = 350.0
 margin_top = 0.0
-margin_right = 417.0
-margin_bottom = 89.0
+margin_right = 420.0
+margin_bottom = 90.0

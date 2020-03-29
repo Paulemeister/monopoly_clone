@@ -15,7 +15,11 @@ Attempt of replicating Monopoly with Godot
 - Added function that returns the field  that a given number is in
 - Added a Main Scene
 - Noticed a bug with the resizing of containers of a Board instance, when another Field Instance, that has bigger x dimensions than the Board instance, is in the same Scene
-
+### Version 1.5
+-Added players
+-Added gamelogic
+-Added pausing/unpausing of the game
+-started to work on base class for fields to inherit from
 
 
 # Reddit

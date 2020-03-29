@@ -1,16 +1,20 @@
 extends MarginContainer
 tool
 
-export var wanted_size: int = 600
 export var field_size_percentage: float = 0.15
 var fields = []
-export var fix_square: bool = true
-var field_size: int
+var field_size: Vector2
 var field_amount: int
+var prison_field: int = 7
+export var size_fixed: bool = false
+export var fixed_size: Vector2 = Vector2()
+
 func _ready():
-	print("Board Setup Initialized")
-	get_fields()
-	print("Board Setup Finished")
+	if not Engine.editor_hint:
+		print("Board Setup Initialized")
+		self.add_to_group("board")
+		get_fields()
+		print("Board Setup Finished")
 
 func _process(delta):
 	arrange_stuff()
@@ -19,19 +23,13 @@ func get_field_amount():
 	return self.field_amount
 
 func arrange_stuff():
-	var actual_size = self.get_size()
-	
-	if Engine.editor_hint:
-		if fix_square:
-			field_size = wanted_size
-			self.set_size(Vector2(wanted_size,wanted_size))
-		else:
-			field_size = min(actual_size.x, actual_size.y)
+	if size_fixed:
+		field_size = fixed_size
 	else:
-		field_size = get_parent().get_size().y
-		self.set_size(Vector2(field_size,field_size))
-		
-	var offset = int(field_size*field_size_percentage)
+		field_size = get_parent().get_size()
+	self.set_size(field_size)
+	var actual_size = self.get_size()
+	var offset = int(field_size.y*field_size_percentage)
 	
 	# Set size of Corner Fields
 	$"ReferenceRect/Top Left".set_size(Vector2(offset,offset))
@@ -64,6 +62,7 @@ func arrange_stuff():
 	
 func get_fields():
 	field_amount = 0
+	fields = []
 	for container in $ReferenceRect.get_children():
 		var temp = []
 		var temp_lenght 
@@ -71,10 +70,12 @@ func get_fields():
 			temp.append(field)
 		temp_lenght = len(temp)
 		for i in range(temp_lenght):
-			fields.append(temp[temp_lenght-i-1])
+			var field = temp[temp_lenght-i-1]
+			fields.append(field)
+			field.set_field_position(field_amount)
 			field_amount += 1
 	print("Got Fields")
-			
+
 func get_field(number):
 	return fields[number]
 

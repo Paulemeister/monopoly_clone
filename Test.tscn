@@ -1,10 +1,985 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=119 format=2]
 
 [ext_resource path="res://Test.gd" type="Script" id=1]
+[ext_resource path="res://Classes/Board3D.gd" type="Script" id=2]
+[ext_resource path="res://Classes/CornerPiece3D.gd" type="Script" id=3]
+[ext_resource path="res://Classes/Street3D.gd" type="Script" id=4]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 187.375, 2, 187.375 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.596078, 0.596078, 0.596078, 1 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 198, 20, 198 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=8]
+material = SubResource( 7 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=9]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=11]
+material = SubResource( 10 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=12]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=14]
+material = SubResource( 13 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=15]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=17]
+material = SubResource( 16 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=18]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=19]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=20]
+material = SubResource( 19 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=21]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=22]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=23]
+material = SubResource( 22 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=24]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=25]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=26]
+material = SubResource( 25 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=27]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=28]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=29]
+material = SubResource( 28 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=30]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="CubeMesh" id=31]
+size = Vector3( 198, 20, 198 )
+
+[sub_resource type="SpatialMaterial" id=32]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=33]
+material = SubResource( 32 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=34]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=35]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=36]
+material = SubResource( 35 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=37]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=38]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=39]
+material = SubResource( 38 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=40]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=41]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=42]
+material = SubResource( 41 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=43]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=44]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=45]
+material = SubResource( 44 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=46]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=47]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=48]
+material = SubResource( 47 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=49]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=50]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=51]
+material = SubResource( 50 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=52]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=53]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=54]
+material = SubResource( 53 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=55]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=56]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=57]
+material = SubResource( 56 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=58]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="CubeMesh" id=59]
+size = Vector3( 198, 20, 198 )
+
+[sub_resource type="SpatialMaterial" id=60]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=61]
+material = SubResource( 60 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=62]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=63]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=64]
+material = SubResource( 63 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=65]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=66]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=67]
+material = SubResource( 66 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=68]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=69]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=70]
+material = SubResource( 69 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=71]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=72]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=73]
+material = SubResource( 72 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=74]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=75]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=76]
+material = SubResource( 75 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=77]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=78]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=79]
+material = SubResource( 78 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=80]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=81]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=82]
+material = SubResource( 81 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=83]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=84]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=85]
+material = SubResource( 84 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=86]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="CubeMesh" id=87]
+size = Vector3( 198, 20, 198 )
+
+[sub_resource type="SpatialMaterial" id=88]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=89]
+material = SubResource( 88 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=90]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=91]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=92]
+material = SubResource( 91 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=93]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=94]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=95]
+material = SubResource( 94 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=96]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=97]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=98]
+material = SubResource( 97 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=99]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=100]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=101]
+material = SubResource( 100 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=102]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=103]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=104]
+material = SubResource( 103 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=105]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=106]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=107]
+material = SubResource( 106 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=108]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=109]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=110]
+material = SubResource( 109 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=111]
+size = Vector3( 151, 20, 123 )
+
+[sub_resource type="SpatialMaterial" id=112]
+albedo_color = Color( 255, 0, 0, 1 )
+roughness = 0.6
+
+[sub_resource type="CubeMesh" id=113]
+material = SubResource( 112 )
+size = Vector3( 47, 20, 123 )
+
+[sub_resource type="CubeMesh" id=114]
+size = Vector3( 151, 20, 123 )
+
+[node name="Test" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 script = ExtResource( 1 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.999354, -0.035946, -4.91036e-008, -0.0194248, 0.540038, 0.841417, -0.0302455, 0.840873, -0.540387, 15.137, 105.087, -253.292 )
+light_energy = 0.53
+light_bake_mode = 2
+shadow_enabled = true
+shadow_bias = 3.46
+shadow_contact = 3.6
+directional_shadow_blend_splits = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.707107, 0.387186, -0.591682, 0, 0.836764, 0.547563, 0.707107, 0.387186, -0.591682, -100, 80, -100 )
+projection = 1
+size = 200.0
+near = 0.01
+far = 5956.4
+
+[node name="Ground" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Board3D" type="Spatial" parent="."]
+transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Spatial" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 650, 0, -650 )
+script = ExtResource( 3 )
+
+[node name="Square" type="MeshInstance" parent="Board3D/Spatial"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Spatial2" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 489.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Spatial3" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 366.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Spatial4" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 243.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="Spatial5" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 120.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 15 )
+material/0 = null
+
+[node name="Spatial6" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -2.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 17 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 18 )
+material/0 = null
+
+[node name="Spatial7" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -125.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 20 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 21 )
+material/0 = null
+
+[node name="Spatial8" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -248.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 23 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 24 )
+material/0 = null
+
+[node name="Spatial9" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -371.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 26 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="Spatial10" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -494.5, 0, -650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 29 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 30 )
+material/0 = null
+
+[node name="Spatial11" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, -650 )
+script = ExtResource( 3 )
+
+[node name="Square" type="MeshInstance" parent="Board3D/Spatial11"]
+mesh = SubResource( 31 )
+material/0 = null
+
+[node name="Spatial12" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, -489.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 33 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 34 )
+material/0 = null
+
+[node name="Spatial13" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, -366.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 36 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 37 )
+material/0 = null
+
+[node name="Spatial14" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, -243.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 39 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 40 )
+material/0 = null
+
+[node name="Spatial15" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, -120.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 42 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 43 )
+material/0 = null
+
+[node name="Spatial16" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, 2.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 45 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 46 )
+material/0 = null
+
+[node name="Spatial17" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, 125.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 48 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 49 )
+material/0 = null
+
+[node name="Spatial18" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, 248.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 51 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 52 )
+material/0 = null
+
+[node name="Spatial19" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, 371.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 54 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 55 )
+material/0 = null
+
+[node name="Spatial20" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, 494.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 57 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 58 )
+material/0 = null
+
+[node name="Spatial21" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650, 0, 650 )
+script = ExtResource( 3 )
+
+[node name="Square" type="MeshInstance" parent="Board3D/Spatial21"]
+mesh = SubResource( 59 )
+material/0 = null
+
+[node name="Spatial22" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -489.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 61 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 62 )
+material/0 = null
+
+[node name="Spatial23" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -366.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 64 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 65 )
+material/0 = null
+
+[node name="Spatial24" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -243.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 67 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 68 )
+material/0 = null
+
+[node name="Spatial25" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -120.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 70 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 71 )
+material/0 = null
+
+[node name="Spatial26" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 2.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 73 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 74 )
+material/0 = null
+
+[node name="Spatial27" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 125.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 76 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 77 )
+material/0 = null
+
+[node name="Spatial28" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 248.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial28"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 79 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial28"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 80 )
+material/0 = null
+
+[node name="Spatial29" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 371.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial29"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 82 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial29"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 83 )
+material/0 = null
+
+[node name="Spatial30" type="Spatial" parent="Board3D"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 494.5, 0, 650 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial30"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 85 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial30"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 86 )
+material/0 = null
+
+[node name="Spatial31" type="Spatial" parent="Board3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 650, 0, 650 )
+script = ExtResource( 3 )
+
+[node name="Square" type="MeshInstance" parent="Board3D/Spatial31"]
+mesh = SubResource( 87 )
+material/0 = null
+
+[node name="Spatial32" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, 489.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial32"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 89 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial32"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 90 )
+material/0 = null
+
+[node name="Spatial33" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, 366.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial33"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 92 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial33"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 93 )
+material/0 = null
+
+[node name="Spatial34" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, 243.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial34"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 95 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial34"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 96 )
+material/0 = null
+
+[node name="Spatial35" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, 120.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial35"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 98 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial35"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 99 )
+material/0 = null
+
+[node name="Spatial36" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, -2.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial36"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 101 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial36"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 102 )
+material/0 = null
+
+[node name="Spatial37" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, -125.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial37"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 104 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial37"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 105 )
+material/0 = null
+
+[node name="Spatial38" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, -248.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial38"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 107 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial38"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 108 )
+material/0 = null
+
+[node name="Spatial39" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, -371.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial39"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 110 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial39"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 111 )
+material/0 = null
+
+[node name="Spatial40" type="Spatial" parent="Board3D"]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650, 0, -494.5 )
+script = ExtResource( 4 )
+
+[node name="Top" type="MeshInstance" parent="Board3D/Spatial40"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
+mesh = SubResource( 113 )
+material/0 = null
+
+[node name="Bottom" type="MeshInstance" parent="Board3D/Spatial40"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, 0 )
+mesh = SubResource( 114 )
+material/0 = null

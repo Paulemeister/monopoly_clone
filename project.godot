@@ -9,19 +9,43 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "Board3D",
+"language": "GDScript",
+"path": "res://Classes/Board3D.gd"
+}, {
 "base": "Sprite",
 "class": "ColorRect2D",
 "language": "GDScript",
 "path": "res://Classes/ColorRect2D.gd"
 }, {
+"base": "Spatial",
+"class": "CornerPiece3D",
+"language": "GDScript",
+"path": "res://Classes/CornerPiece3D.gd"
+}, {
+"base": "Spatial",
+"class": "FieldBaseClass3D",
+"language": "GDScript",
+"path": "res://Classes/FieldBaseClass3D.gd"
+}, {
 "base": "Control",
 "class": "Field_Baseclass",
 "language": "GDScript",
 "path": "res://Scripts/Field_Baseclass.gd"
+}, {
+"base": "Spatial",
+"class": "Street3D",
+"language": "GDScript",
+"path": "res://Classes/Street3D.gd"
 } ]
 _global_script_class_icons={
+"Board3D": "",
 "ColorRect2D": "",
-"Field_Baseclass": ""
+"CornerPiece3D": "",
+"FieldBaseClass3D": "",
+"Field_Baseclass": "",
+"Street3D": ""
 }
 
 [application]

@@ -8,7 +8,7 @@ font_path = "res://Media/OpenSans-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 resource_name = "OpenSans"
-size = 8
+size = 23
 extra_spacing_char = -1
 font_data = SubResource( 1 )
 
@@ -46,7 +46,6 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-editor/display_folded = true
 margin_right = 184.0
 margin_bottom = 225.0
 size_flags_horizontal = 3

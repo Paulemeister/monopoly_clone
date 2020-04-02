@@ -152,7 +152,6 @@ custom_constants/margin_bottom = 0
 
 [node name="Bottom" type="HBoxContainer" parent="ReferenceRect"]
 pause_mode = 1
-editor/display_folded = true
 margin_left = 90.0
 margin_top = 510.0
 margin_right = 510.0

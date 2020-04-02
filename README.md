@@ -25,5 +25,8 @@ Attempt of replicating Monopoly with Godot
 - Switched to using Classes and no instanced scenes
 - added little wobble animation for indivisual fields
 - All 3D Classes have proper inheritance
+## What I learned
+Godot has some weird quirks that I had to work around to make things work. Only countless hours of reading forums led me to the conclusion that:
+- eventhough the editor lets you input colors with rgb values from 0 to 255, in actuallity they ae stored as floats from 0 to 100, with 0 to 1 being the actual colorspace 
 # Reddit
 Solved my problem, would appreciate advice though

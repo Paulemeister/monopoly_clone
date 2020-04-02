@@ -16,11 +16,14 @@ Attempt of replicating Monopoly with Godot
 - Added a Main Scene
 - Noticed a bug with the resizing of containers of a Board instance, when another Field Instance, that has bigger x dimensions than the Board instance, is in the same Scene
 ### Version 1.5
--Added players
--Added gamelogic
--Added pausing/unpausing of the game
--started to work on base class for fields to inherit from
-
-
+- Added players
+- Added gamelogic
+- Added pausing/unpausing of the game
+- started to work on base class for fields to inherit from
+### Version 1.6
+- Started Transition to 3D Board
+- Switched to using Classes and no instanced scenes
+- added little wobble animation for indivisual fields
+- All 3D Classes have proper inheritance
 # Reddit
 Solved my problem, would appreciate advice though

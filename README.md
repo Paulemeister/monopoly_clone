@@ -36,8 +36,8 @@ Godot has some weird quirks that I had to work around to make things work. Somet
 - You can add your own Classes through the editor after setting it's name with node_name ClassName
 - Adding a Font to different Labels will make them share it, so changing the font size will affect all of the Labels
   - Solution: make them unique with Make Unique inside the editor or use font = font.duplicate() (according to an issue on github)
-- You get the font of a Lable with $Label.get("custom_font/font")
-- ControlNodes don't automatically resize to its parents size, MarginContainers with all of the custom_constants set to 0
+- You get the font of a Label with $Label.get("custom_font/font")
+- ControlNodes don't automatically resize to it's parents size, MarginContainers with all of the custom_constants set to 0 will do that
 - The only way to have a Container resize its children with a percentual margin/space inbetween is to add an emmpty node and fiddling around with size_flags_strech_ratio
 - For whatever reason the syntax for getting a random integer i with a≤i≤b is var i: int = randi()%(b-a+1)+a
 # Reddit

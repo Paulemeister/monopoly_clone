@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/2D/Board.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/User Interface.tscn" type="PackedScene" id=3]
+
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+player_amount = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="Background" type="ColorRect" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.32549, 0.290196, 0.498039, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+margin_left = 212.0
+margin_right = 812.0
+margin_bottom = 600.0
+
+[node name="Board" parent="ReferenceRect" instance=ExtResource( 2 )]
+size_fixed = false
+
+[node name="User Interface" parent="." instance=ExtResource( 3 )]
+visible = false

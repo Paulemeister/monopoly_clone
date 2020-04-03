@@ -1,0 +1,40 @@
+Go
+Street;Brown;Mediteranean Avenue;60
+Community Chest
+Street;Brown;Baltic Avenue;60
+IncomeTax;200
+Railroad;Reading Railroad;200
+Street;Light Blue;Oriental Avenue;100
+Chance
+Street;Light Blue;Vermont Avenue;100
+Street;Light Blue;Connecticut Avenue;120
+Jail
+Street;Pink;St. Charles Place;140
+ElectricCompany;150
+Street;Pink;States Avenue;140
+Street;Pink;Virginia Avenue;160
+Railroad;Pennsylvania Railroad;200
+Street;Orange;St.James Place;180
+CommunityChest
+Street;Orange;Tennessee Avenue;180
+Street;Orange;New York Avenue;200
+FreeParking
+Street;Red;Kentucky Avenue;200
+Chance
+Street;Red;Indiana Avenue;220
+Street;Red;Illinois Avenue;240
+Railroad;B. & O. Railroad;200
+Street;Yellow;Atlantic Avenue;260
+Street;Yellow;Ventor Avenue;260
+WaterWorks;150
+Street;Yellow;Marvin Gardens;280
+GoToJail
+Street;Green;Pacific Avenue;300
+Street;Green;North Carolina Avenue;300
+CommunityChest
+Street;Green;Pensylvania Avenue;320
+Railroad;Short Line;200
+Chance
+Street;Blue;Park Place;350
+LuxuryTax
+Street;Blue;Boardwalk;400

@@ -35,3 +35,5 @@ func player_left(player):
 func get_player_amount_on_field():
 	return len(players_on_field)
 
+
+

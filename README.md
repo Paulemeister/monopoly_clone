@@ -25,6 +25,11 @@ Attempt of replicating Monopoly with Godot
 - Switched to using Classes and no instanced scenes
 - added little wobble animation for indivisual fields
 - All 3D Classes have proper inheritance
+### Version 1.7
+- Added creating boards from files
+  -Added Board: Classic Board (Board1), Original Names, Sizes and Street Colors. Took some time to write that down
+- Board contents are now better aligned
+- Added init function to Street3D, so that its actually usefull
 ## What I learned
 Godot has some weird quirks that I had to work around to make things work. Sometimes only countless hours of reading forums led me to the answer and sometimes I just overlooked that:
 - eventhough the editor lets you input colors with rgb values from 0 to 255, in actuallity they ae stored as floats from 0 to 100, with 0 to 1 being the actual colorspace 
@@ -40,5 +45,6 @@ Godot has some weird quirks that I had to work around to make things work. Somet
 - ControlNodes don't automatically resize to it's parents size, MarginContainers with all of the custom_constants set to 0 will do that
 - The only way to have a Container resize its children with a percentual margin/space inbetween is to add an emmpty node and fiddling around with size_flags_strech_ratio
 - For whatever reason the syntax for getting a random integer i with a≤i≤b is var i: int = randi()%(b-a+1)+a
+- Naming Software 1.0 when it isnt even usable is not a great idea
 # Reddit
 Solved my problem, would appreciate advice though

@@ -4,19 +4,19 @@ class_name Board3D
 
 export var speed: float = 2
 export var height: float= 200
-export var wobble: bool = true
+export var wobble: bool = false setget set_wobble
 
 var length = 1301
-var fields = []
+onready var fields = []
 var time_passed: float = 0
 
 signal wobble_stopped
 
+
 func _ready():
-	#Fix Children Duplicating
+	fields = []
 	for child in self.get_children():
 		child.free()
-	
 	if get_parent().get_owner() != null:
 		self.set_owner(get_parent().get_owner())
 	else:
@@ -25,20 +25,21 @@ func _ready():
 	self.connect("wobble_stopped",self,"reset_board")
 	
 	create_from_file("res://Boards/Board1.txt")
-	
+
 func _physics_process(delta):
 	if not Engine.editor_hint:
 		if Input.is_action_just_pressed("ui_accept"):
 			print("ui_accept just pressed")
-			wobble = !wobble
+			self.wobble = !wobble
 			if !wobble:
 				emit_signal("wobble_stopped")
 	if wobble:
 		wobble(delta)
 
-func _fixed_process(delta):
-	if wobble:
-		wobble(delta)
+func set_wobble(value):
+	if !value:
+		reset_board()
+	wobble = value
 
 func reset_board():
 	for field in fields:

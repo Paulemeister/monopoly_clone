@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Monopoly"
-run/main_scene="res://Scenes/2D/Main.tscn"
+run/main_scene="res://Scenes/Main3D.tscn"
 
 [rendering]
 

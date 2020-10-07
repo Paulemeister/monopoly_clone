@@ -20,7 +20,7 @@ func _ready():
 		print("Got Board")
 		
 		for i in range(player_amount):
-			var player_instance = preload("res://Scenes/Player.tscn").instance()
+			var player_instance = preload("res://Scenes/2D/Player.tscn").instance()
 			players.append(player_instance)
 			self.add_child(player_instance)
 			player_instance.set_color(i)

@@ -1,10 +1,10 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=23]
 font_path = "res://Media/OpenSans-Regular.ttf"
 
 [resource]
 resource_name = "OpenSans"
 size = 8
 extra_spacing_char = -1
-font_data = SubResource( 1 )
+font_data = SubResource( 23 )

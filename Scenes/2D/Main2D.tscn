@@ -4,7 +4,6 @@
 [ext_resource path="res://Scenes/2D/Board.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/User Interface.tscn" type="PackedScene" id=3]
 
-
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 player_amount = 4
@@ -30,6 +29,7 @@ margin_right = 812.0
 margin_bottom = 600.0
 
 [node name="Board" parent="ReferenceRect" instance=ExtResource( 2 )]
+field_size_percentage = 0.15
 size_fixed = false
 
 [node name="User Interface" parent="." instance=ExtResource( 3 )]

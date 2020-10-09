@@ -2,10 +2,10 @@ extends "res://Classes/FieldBaseClass3D.gd"
 tool
 class_name Street3D
 
-export var street_name: String = "Streetname"
-export var color: Color = Color(1,1,1)
-export var price: int = 0
-export var rent: int = 0
+export var street_name: String
+export var color: Color
+#export var price: int = 0
+#export var rent: int = 0
 
 var colors: = {
 	"Brown":Color("955436"),
@@ -17,15 +17,15 @@ var colors: = {
 	"Green":Color("1fb25a"),
 	"Blue":Color("0072bb")
 }
-var field_position: int
-var players_on_field = []
-var slots = []
+#var field_position: int
+#var players_on_field = []
+#var slots = []
 
 func _init(color: String = "Color",street_name: String="Streetname",price: int= 0):
 	self.color = colors.get(color,Color(1,1,1))
 	self.add_to_group(color)
 	self.street_name = street_name
-	self.price = price
+	#self.price = price
 	
 func _ready():
 	var parent_has_owner = get_parent().get_owner() != null
@@ -63,8 +63,6 @@ func _ready():
 	#self.add_outline()
 	
 	#self.set_scale(Vector3(0.125,0.125,0.125))
-	get_tree().connect("node_configuration_warning_changed",self,"_on_node_configuration_warning_changed")
+	#get_tree().connect("node_configuration_warning_changed",self,"_on_node_configuration_warning_changed")
 	print("Created "+self.street_name)
 	
-func _on_node_configuration_warning_changed(node: Node):
-	print("node changed")

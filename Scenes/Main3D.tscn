@@ -606,7 +606,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, 492 )
 script = ExtResource( 3 )
 street_name = "Mediteranean Avenue"
 color = Color( 0.584314, 0.329412, 0.211765, 1 )
-price = 60
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -621,6 +620,8 @@ material/0 = null
 [node name="Spatial3" type="Spatial" parent="Board3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, 369 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -637,7 +638,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, 246 )
 script = ExtResource( 3 )
 street_name = "Baltic Avenue"
 color = Color( 0.584314, 0.329412, 0.211765, 1 )
-price = 60
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -652,6 +652,8 @@ material/0 = null
 [node name="Spatial5" type="Spatial" parent="Board3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, 123 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -666,6 +668,8 @@ material/0 = null
 [node name="Spatial6" type="Spatial" parent="Board3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, 0 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -682,7 +686,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, -123 )
 script = ExtResource( 3 )
 street_name = "Oriental Avenue"
 color = Color( 0.666667, 0.878431, 0.980392, 1 )
-price = 100
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -697,6 +700,8 @@ material/0 = null
 [node name="Spatial8" type="Spatial" parent="Board3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, -246 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -713,7 +718,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, -369 )
 script = ExtResource( 3 )
 street_name = "Vermont Avenue"
 color = Color( 0.666667, 0.878431, 0.980392, 1 )
-price = 100
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -730,7 +734,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -650.5, 0, -492 )
 script = ExtResource( 3 )
 street_name = "Connecticut Avenue"
 color = Color( 0.666667, 0.878431, 0.980392, 1 )
-price = 120
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial10"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -756,7 +759,6 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -492,
 script = ExtResource( 3 )
 street_name = "St. Charles Place"
 color = Color( 0.85098, 0.227451, 0.588235, 1 )
-price = 140
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial12"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -771,6 +773,8 @@ material/0 = null
 [node name="Spatial13" type="Spatial" parent="Board3D"]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -369, 0, -650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial13"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -787,7 +791,6 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -246,
 script = ExtResource( 3 )
 street_name = "States Avenue"
 color = Color( 0.85098, 0.227451, 0.588235, 1 )
-price = 140
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial14"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -804,7 +807,6 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -123,
 script = ExtResource( 3 )
 street_name = "Virginia Avenue"
 color = Color( 0.85098, 0.227451, 0.588235, 1 )
-price = 160
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial15"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -819,6 +821,8 @@ material/0 = null
 [node name="Spatial16" type="Spatial" parent="Board3D"]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, -650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial16"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -835,7 +839,6 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 123, 
 script = ExtResource( 3 )
 street_name = "St.James Place"
 color = Color( 0.968627, 0.580392, 0.113725, 1 )
-price = 180
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial17"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -850,6 +853,8 @@ material/0 = null
 [node name="Spatial18" type="Spatial" parent="Board3D"]
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 246, 0, -650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial18"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -866,7 +871,6 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 369, 
 script = ExtResource( 3 )
 street_name = "Tennessee Avenue"
 color = Color( 0.968627, 0.580392, 0.113725, 1 )
-price = 180
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial19"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -883,7 +887,6 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 492, 
 script = ExtResource( 3 )
 street_name = "New York Avenue"
 color = Color( 0.968627, 0.580392, 0.113725, 1 )
-price = 200
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial20"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -909,7 +912,6 @@ transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5
 script = ExtResource( 3 )
 street_name = "Kentucky Avenue"
 color = Color( 0.929412, 0.105882, 0.141176, 1 )
-price = 200
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial22"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -924,6 +926,8 @@ material/0 = null
 [node name="Spatial23" type="Spatial" parent="Board3D"]
 transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5, 0, -369 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial23"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -940,7 +944,6 @@ transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5
 script = ExtResource( 3 )
 street_name = "Indiana Avenue"
 color = Color( 0.929412, 0.105882, 0.141176, 1 )
-price = 220
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial24"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -957,7 +960,6 @@ transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5
 script = ExtResource( 3 )
 street_name = "Illinois Avenue"
 color = Color( 0.929412, 0.105882, 0.141176, 1 )
-price = 240
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial25"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -972,6 +974,8 @@ material/0 = null
 [node name="Spatial26" type="Spatial" parent="Board3D"]
 transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5, 0, 0 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial26"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -988,7 +992,6 @@ transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5
 script = ExtResource( 3 )
 street_name = "Atlantic Avenue"
 color = Color( 0.996078, 0.94902, 0, 1 )
-price = 260
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial27"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1005,7 +1008,6 @@ transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5
 script = ExtResource( 3 )
 street_name = "Ventor Avenue"
 color = Color( 0.996078, 0.94902, 0, 1 )
-price = 260
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial28"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1020,6 +1022,8 @@ material/0 = null
 [node name="Spatial29" type="Spatial" parent="Board3D"]
 transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5, 0, 369 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial29"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1036,7 +1040,6 @@ transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, 650.5
 script = ExtResource( 3 )
 street_name = "Marvin Gardens"
 color = Color( 0.996078, 0.94902, 0, 1 )
-price = 280
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial30"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1062,7 +1065,6 @@ transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, 492, 0,
 script = ExtResource( 3 )
 street_name = "Pacific Avenue"
 color = Color( 0.121569, 0.698039, 0.352941, 1 )
-price = 300
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial32"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1079,7 +1081,6 @@ transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, 369, 0,
 script = ExtResource( 3 )
 street_name = "North Carolina Avenue"
 color = Color( 0.121569, 0.698039, 0.352941, 1 )
-price = 300
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial33"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1094,6 +1095,8 @@ material/0 = null
 [node name="Spatial34" type="Spatial" parent="Board3D"]
 transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, 246, 0, 650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial34"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1110,7 +1113,6 @@ transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, 123, 0,
 script = ExtResource( 3 )
 street_name = "Pensylvania Avenue"
 color = Color( 0.121569, 0.698039, 0.352941, 1 )
-price = 320
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial35"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1125,6 +1127,8 @@ material/0 = null
 [node name="Spatial36" type="Spatial" parent="Board3D"]
 transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, 0, 0, 650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial36"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1139,6 +1143,8 @@ material/0 = null
 [node name="Spatial37" type="Spatial" parent="Board3D"]
 transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, -123, 0, 650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial37"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1155,7 +1161,6 @@ transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, -246, 0
 script = ExtResource( 3 )
 street_name = "Park Place"
 color = Color( 0, 0.447059, 0.733333, 1 )
-price = 350
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial38"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1170,6 +1175,8 @@ material/0 = null
 [node name="Spatial39" type="Spatial" parent="Board3D"]
 transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, -369, 0, 650.5 )
 script = ExtResource( 3 )
+street_name = "Streetname"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial39"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
@@ -1186,7 +1193,6 @@ transform = Transform( 1.19249e-008, 0, 1, 0, 1, 0, -1, 0, 1.19249e-008, -492, 0
 script = ExtResource( 3 )
 street_name = "Boardwalk"
 color = Color( 0, 0.447059, 0.733333, 1 )
-price = 400
 
 [node name="Top" type="MeshInstance" parent="Board3D/Spatial40"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.5, 0, 0 )
